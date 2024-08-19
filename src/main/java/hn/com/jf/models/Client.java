@@ -10,6 +10,7 @@ import lombok.Data;
 public class Client {
 	@Value("${client.name}")
 	private String name;
+	
 	@Value("${client.lastname}")
 	private String lastname;
 }

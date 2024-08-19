@@ -13,7 +13,10 @@ import lombok.Data;
 public class Invoice {
 	@Autowired
 	private Client client;
+
 	@Value("${invoice.description}")
 	private String description;
+
+	@Autowired
 	private List<Item> items;
 }
