@@ -7,10 +7,14 @@ public class Item {
 	
 	public Item(Product product, Integer quantity) {
 		this.product = product;
-		Quantity = quantity;
+		this.quantity = quantity;
 	}
 	
 	private Product product;
 	
-	private Integer Quantity;
+	private Integer quantity;
+	
+	public int getAmount() {
+		return quantity * product.getPrice();
+	}
 }

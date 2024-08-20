@@ -19,4 +19,17 @@ public class Invoice {
 
 	@Autowired
 	private List<Item> items;
+
+	public int getTotal() {
+		int total;
+		
+//		total = 0;
+//		for (Item item : items) {
+//			total += item.getAmount();
+//		}
+
+		total = items.stream().map(item -> item.getAmount()).reduce(0, (sum, amount) -> sum + amount);
+
+		return total;
+	}
 }
